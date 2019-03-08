@@ -1,0 +1,26 @@
+{
+  "name": "plaid_openbanking",
+  "version": "1.0.0",
+  "description": "Teste de integração com api Plaid ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilocutrim/Plaid_OpenBanking.git"
+  },
+  "author": "Danilo Cutrim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilocutrim/Plaid_OpenBanking/issues"
+  },
+  "homepage": "https://github.com/danilocutrim/Plaid_OpenBanking#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "envvar": "^2.0.0",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "plaid": "^2.15.0"
+  }
+}
