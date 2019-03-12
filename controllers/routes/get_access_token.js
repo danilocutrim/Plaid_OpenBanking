@@ -21,22 +21,22 @@ module.exports = function(app){
     PUBLIC_TOKEN = request.body.public_token;
     client.exchangePublicToken(PUBLIC_TOKEN, function(error,
     tokenResponse) {
-    if (error != null) {
-        var msg = 'Could not exchange public_token!';
-        console.log(msg + '\n' + JSON.stringify(error));
-        return response.json({
-            error: msg
-        });
-    }
-    ACCESS_TOKEN = tokenResponse.access_token;
-    ITEM_ID = tokenResponse.item_id;
-    //prettyPrintResponse(tokenResponse);
-    console.log(tokenResponse.access_token)
-    response.json({
-        access_token: ACCESS_TOKEN,
-        item_id: ITEM_ID,
-        error: false
-           });
+        if (error != null) {
+            var msg = 'Could not exchange public_token!';
+            console.log(msg + '\n' + JSON.stringify(error));
+            return response.json({
+                error: msg
+            });
+        }
+        ACCESS_TOKEN = tokenResponse.access_token;
+        ITEM_ID = tokenResponse.item_id;
+        //prettyPrintResponse(tokenResponse);
+        console.log(ACCESS_TOKEN)
+        response.json({
+            access_token: ACCESS_TOKEN,
+            item_id: ITEM_ID,
+            error: false
+            });
         });
     });
 }
