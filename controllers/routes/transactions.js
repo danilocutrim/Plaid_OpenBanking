@@ -35,7 +35,7 @@ module.exports = function(app){
             });
         }
         else {
-            console.log(transactionsResponse);
+            console.log(transactionsResponse.transactions);
             response.json({error: false, transactions:
             transactionsResponse});
             }
